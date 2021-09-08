@@ -29,6 +29,11 @@ public class Variables {
         // characters are any keypress
         char yesOrNo = 'Y';
         char poop = '💩';
+          
+        // ASCII Table
+        // https://www.asciitable.com/
+        // UNICODE Table
+        // https://unicode-table.com/en/
         
         
         
