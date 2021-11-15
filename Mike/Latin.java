@@ -30,3 +30,40 @@ public class Latin {
         
     }
 }
+
+
+/*
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Latin {
+    
+    public static void main (String[] args) throws Exception {
+        
+        java.io.File file = new java.io.File("latin.txt");
+
+        // Create a Scanner for the file
+        Scanner input = new Scanner(file);
+    
+        ArrayList<String> list = new ArrayList<String>();
+    
+        // Read data from a file
+    
+        while (input.hasNext()) {
+        
+          list.add(input.next());
+
+        }
+    
+    
+        System.out.println(list.get(3));
+        
+        input.close();
+        
+
+        
+    }
+}
+
+*/
