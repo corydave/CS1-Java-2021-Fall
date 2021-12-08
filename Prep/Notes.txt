@@ -29,3 +29,112 @@ public class Widgets {
     
   }
 }
+
+
+
+
+
+
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class ArrayAverage {
+  public static void main (String[] args) {
+    
+    // Create an instance of SCANNER
+    Scanner scanner = new Scanner(System.in);
+    
+    // Ask the user for a seed and store it in 'seed'
+    System.out.println("SEED:");
+    int seed = scanner.nextInt();
+    
+    // Ask the user for a size of the array and store it in size
+    System.out.println("\nSIZE:");
+    int size = scanner.nextInt();
+    
+    // Create an instance of RANDOM
+    Random random = new Random(seed);
+    
+    // Create an array of ints that is 20 elements long
+    // Note that the size, 20, is a parameter for this method
+    // You may change it while debugging
+    int[] arr = createArray(random, size);
+    
+    // You can modify this code for controlled testing
+    // Pick one of the following return statements and uncomment
+    // it, but be sure to comment out the call to 'createArray()' on
+    // line 24
+    // int[] arr = {1, 1, 1};
+    // int[] arr = {1, 2, 3};
+    // int[] arr = {1, 2, 3, 4};
+
+    System.out.println("\nArray: " + displayArray(arr));
+    System.out.println("Average: " + computeAverage(arr));
+    
+  }
+
+  public static double computeAverage(int[] arr) {
+    
+    // INSERT YOUR CODE HERE
+    // This method should find the average of all the elements 
+    // in the array. If there are no elements in the array, the
+    // method should return 0.
+    
+    double total = 0;
+    
+    for (int i = 0; i < arr.length; i++) {
+      
+      total += arr[i];
+      
+    }
+    
+    // double avg = total/arr.length;
+    // return avg;
+    
+    if (arr.length == 0 ) {
+      return 0;
+    } else {
+      return total/arr.length;
+    }
+ 
+  }
+  
+  public static String displayArray(int[] arr) {
+
+    if (arr.length > 0) {
+        
+        String str = "["    ;
+        
+        for (int i = 0; i < arr.length - 1; i++) {
+          str += arr[i] + ", ";
+        }
+        
+        str += arr[arr.length-1] + "]";
+
+        return str;        
+
+    } else {
+        
+        return "[]";
+        
+    }
+
+  }
+  
+  public static int[] createArray(Random random, int size) {
+    
+    // Create an empty array of size 20
+    int[] arr = new int[size];
+    
+    // Populate array with ints valued 1-100
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = random.nextInt(100) + 1;
+    }      
+    
+    // Return the new array
+    return arr;
+    
+  }
+
+}
