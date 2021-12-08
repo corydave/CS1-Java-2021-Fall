@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Widgets {
+  public static void main (String[] args) {
+
+    // Create an instance of SCANNER
+    Scanner scanner = new Scanner(System.in);
+    
+    // Get the 'numOfGallons' from the user
+    System.out.println("Enter the number of widgets you are purchasing:");
+    int numOfWidgets = scanner.nextInt();
+    System.out.println();
+    
+    // INSERT YOUR CODE HERE
+    // Calculate and display the cost of the widgets being purchased
+    double totalCost = -1;
+    
+    if (numOfWidgets <= 144) {
+      totalCost = numOfWidgets * .09;
+    } else {
+      totalCost = ((numOfWidgets - 144) * .04) + (144 * .09);
+    }
+    
+    
+    System.out.println("The total cost of the widget order is $" + totalCost);
+
+
+    
+    
+  }
+}
